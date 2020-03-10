@@ -1,1 +1,19 @@
 // Mixins Here
+
+.btn-class(@backGround, @font-color) {
+  padding: 15px 15px;
+  border-radius: 5px;
+  background-color: @backGround;
+  color: @font-color;
+  text-align: center;
+
+  &:hover {
+      background-color: lighten(@backGround, 10%);
+      color: contrast(@backGround);
+  }
+}
+
+.center() {
+  text-align: center;
+
+}
