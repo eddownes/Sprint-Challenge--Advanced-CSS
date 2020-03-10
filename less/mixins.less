@@ -1,35 +1,19 @@
 // Mixins Here
 
-@base-color: rgb(0, 175, 137);
-@font-size: 16px;
-@size: 4px;
+.btn-class(@backGround, @font-color) {
+  padding: 15px 15px;
+  border-radius: 5px;
+  background-color: @backGround;
+  color: @font-color;
+  text-align: center;
 
-//Base style for button and text classes
-.buttons(@background){
-    border-radius: 10px;
-    background: teal;
-    padding: 5%; 
-    width: 75%;
-    text-align: center;
-    color: white;
-  
+  &:hover {
+      background-color: lighten(@backGround, 10%);
+      color: contrast(@backGround);
   }
+}
 
-  .sizing(@border-radius; @height; @width){
-    border-radius: @border-radius;
-    height: @height;
-    width: @width;
-    }
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
-    background-color: darkgrey;
-    .sizing(15px; 4rem; 20rem)
-  }
-  .mbl-img{
-    width: 80%;
-    height: 80%;
-  } 
+.center() {
+  text-align: center;
+
+}

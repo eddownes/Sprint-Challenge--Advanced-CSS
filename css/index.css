@@ -1,18 +1,3 @@
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  background-color: darkgrey;
-  border-radius: 15px;
-  height: 4rem;
-  width: 20rem;
-}
-.mbl-img {
-  width: 80%;
-  height: 80%;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -175,41 +160,31 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-.container .navbar {
+.nav-container {
+  background-color: #F6F6F6;
+  text-align: center;
+  border: #F1F1F1;
+  padding: 10px;
+}
+.nav-container h1 {
+  color: #23293B;
+  font-size: 3.5rem;
+}
+.nav-container nav {
   display: flex;
   justify-content: center;
-  padding: 20px 0px 10px 0px;
-  width: 100%;
-}
-.container .navbar .nav-item {
-  text-decoration: none;
-  color: black;
-  font-size: medium;
-  text-align: right;
-  padding: 10px 10px 0px 10px;
-}
-.main-title {
-  text-align: center;
-  height: 1px;
-  font-size: xx-large;
-  padding-bottom: 25px;
-  padding-top: 10px;
-}
-.header-image {
-  padding: 10px 0px 10px 0px;
 }
 @media (max-width: 500px) {
-  .container {
-    width: 500px;
-    background: gray;
+  .nav-container nav {
+    width: 80%;
+    margin: auto;
   }
-  .container .navbar {
-    display: flex;
-    flex-direction: column;
-  }
-  .container .navbar .nav-item {
-    margin-bottom: 20px;
-  }
+}
+.nav-container nav a {
+  margin: 10px 20px 0px 0px;
+  color: #454A59;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 footer {
   color: #22283B;
@@ -221,22 +196,57 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.home .intro img {
+  margin-top: 11px;
+}
+@media (max-width: 500px) {
+  .home .intro img {
+    width: 90%;
+    margin: 5x;
+    margin-left: 20px;
+    align-items: center;
+  }
+}
 .home .intro h2 {
-  padding: 15px;
+  padding: 10px;
 }
 .home .intro p {
-  padding: 0 15px;
+  padding: 15px;
+}
+@media (max-width: 500px) {
+  .home .intro p {
+    margin-bottom: 10px;
+  }
 }
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images {
+    flex-direction: column;
+  }
+  .home .space-images .sky {
+    display: none;
+  }
+  .home .space-images .launch {
+    display: none;
+  }
+}
 .home .space-images img {
   width: 28%;
-  margin: 20px 2.5%;
+  margin: 20px 2%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    height: 100%;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -252,23 +262,70 @@ footer {
   border-top: 1px solid #dee2e6;
   padding: 50px 60px;
   display: flex;
-  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .walk {
+    flex-direction: column-reverse;
+  }
 }
 .home .walk .walk-text {
   width: 50%;
 }
-.home .walk .walk-text h3 {
-  margin-bottom: 10px;
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 80%;
+    margin: auto;
+    justify-content: left;
+  }
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text p {
+    width: 100%;
+  }
+}
+.home .walk .walk-text h3 {
+  margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text h3 {
+    margin-top: 10px;
+  }
+}
+.home .walk .walk-text .btn {
+  padding: 15px 15px;
+  border-radius: 5px;
+  background-color: #22283A;
+  color: #F1F1F1;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #353e5a;
+  color: #ffffff;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 .home .walk .walk-img {
-  width: 46%;
+  width: auto;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin: auto;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
